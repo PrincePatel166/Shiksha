@@ -21,7 +21,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-md px-8 py-4 flex items-center justify-between">
       <div className="flex items-center space-x-2">
-        <img src="/assets/logo.png" alt="Logo" className="w-10 h-10" />
+        <img src="/logo.png" alt="Logo" className="w-10 h-10" />
         <h1 className="text-2xl font-bold text-gray-800 tracking-wide">Shiksha</h1>
       </div>
   
