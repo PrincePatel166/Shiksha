@@ -45,7 +45,7 @@ const HeroSection = () => {
         {/* Right Section - Image */}
         <div className="flex-1 flex justify-center">
           <img
-            src="/public/hero-image.jpg"
+            src="/assets/hero-image.jpg"
             alt="Learning"
             className="w-3/4 md:w-full object-cover rounded-xl shadow-2xl hover:scale-105 transition-all duration-300"
           />
@@ -69,7 +69,7 @@ const HeroSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <img
-                src="/public/study-group.jpg"
+                src="/assets/study-group.jpg"
                 alt="Students studying"
                 className="w-3/4 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
               />
@@ -92,7 +92,7 @@ const HeroSection = () => {
             </div>
             <div className="flex justify-center">
               <img
-                src="/public/progress-tracking.jpg"
+                src="/assets/progress-tracking.jpg"
                 alt="Progress tracking"
                 className="w-3/4 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
               />
@@ -103,7 +103,7 @@ const HeroSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mt-16">
             <div className="flex justify-center">
               <img
-                src="/public/exam-prep.jpg"
+                src="/assets/exam-prep.jpg"
                 alt="Exam preparation"
                 className="w-3/4 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
               />
@@ -126,7 +126,7 @@ const HeroSection = () => {
           </div>
           <div className="flex justify-center">
             <img
-              src="/public/community.jpg"
+              src="/assets/community.jpg"
               alt="Community discussions"
               className="w-3/4 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
             />
@@ -137,7 +137,7 @@ const HeroSection = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mt-16">
             <div className="flex justify-center">
               <img
-                src="/public/feedback.jpg"
+                src="/assets/feedback.jpg"
                 alt="User feedback"
                 className="w-3/4 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
               />
