@@ -39,7 +39,7 @@ const Exam = ({ isAuthenticated }) => {
 
   const fetchSubjects = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/exams/subjects", { withCredentials: true });
+      const response = await axios.get("https://shiksha-backend-vaw7.onrender.com/api/exams/subjects", { withCredentials: true });
       setSubjects(response.data.subjects);
     } catch (err) {
       setError("Failed to load subjects");
@@ -49,7 +49,7 @@ const Exam = ({ isAuthenticated }) => {
   const fetchTopics = async (subjectId) => {
     if (!subjectId) return;
     try {
-      const response = await axios.get(`http://localhost:5000/api/exams/topics/${subjectId}`, { withCredentials: true });
+      const response = await axios.get(`https://shiksha-backend-vaw7.onrender.com/api/exams/topics/${subjectId}`, { withCredentials: true });
       setTopics(response.data.topics);
     } catch (err) {
       setError("Failed to load topics");
@@ -65,7 +65,7 @@ const Exam = ({ isAuthenticated }) => {
     setError("");
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/exams/questions",
+        "https://shiksha-backend-vaw7.onrender.com/api/exams/questions",
         { subject: selectedSubject, topic: selectedTopic },
         { withCredentials: true }
       );
@@ -153,7 +153,7 @@ const Exam = ({ isAuthenticated }) => {
   
     try {
       // Fetch user profile to get userId
-      const profileRes = await axios.get("http://localhost:5000/api/users/profile", {
+      const profileRes = await axios.get("https://shiksha-backend-vaw7.onrender.com/api/users/profile", {
         withCredentials: true,
       });
   
@@ -172,7 +172,7 @@ const Exam = ({ isAuthenticated }) => {
   
       // Submit exam with userId
       const response = await axios.post(
-        "http://localhost:5000/api/exams/submit",
+        "https://shiksha-backend-vaw7.onrender.com/api/exams/submit",
         { answers: finalAnswers, subject: selectedSubject, topic: selectedTopic, userId },
         { withCredentials: true }
       );

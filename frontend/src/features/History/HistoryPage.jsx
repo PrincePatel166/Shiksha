@@ -23,9 +23,9 @@ const HistoryPage = ({ isAuthenticated }) => {
     const fetchExams = async () => {
       try {
         const [examsResponse, subjectsResponse, topicsResponse] = await Promise.all([
-          axios.get("http://localhost:5000/api/exams", { withCredentials: true }),
-          axios.get("http://localhost:5000/api/subjectname", { withCredentials: true }),
-          axios.get("http://localhost:5000/api/topicname", { withCredentials: true }),
+          axios.get("https://shiksha-backend-vaw7.onrender.com/api/exams", { withCredentials: true }),
+          axios.get("https://shiksha-backend-vaw7.onrender.com/api/subjectname", { withCredentials: true }),
+          axios.get("https://shiksha-backend-vaw7.onrender.com/api/topicname", { withCredentials: true }),
         ]);
 
         const exams = examsResponse.data.exams || [];
@@ -60,9 +60,9 @@ const HistoryPage = ({ isAuthenticated }) => {
   const handleExamClick = async (examId) => {
     try {
       const [examResponse, subjectsResponse, topicsResponse] = await Promise.all([
-        axios.get(`http://localhost:5000/api/exams/${examId}`, { withCredentials: true }),
-        axios.get("http://localhost:5000/api/subjectname", { withCredentials: true }),
-        axios.get("http://localhost:5000/api/topicname", { withCredentials: true }),
+        axios.get(`https://shiksha-backend-vaw7.onrender.com/api/exams/${examId}`, { withCredentials: true }),
+        axios.get("https://shiksha-backend-vaw7.onrender.com/api/subjectname", { withCredentials: true }),
+        axios.get("https://shiksha-backend-vaw7.onrender.com/api/topicname", { withCredentials: true }),
       ]);
 
       const exam = examResponse.data;
@@ -95,7 +95,7 @@ const HistoryPage = ({ isAuthenticated }) => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/exams/${id}`, {
+      await axios.delete(`https://shiksha-backend-vaw7.onrender.com/api/exams/${id}`, {
         withCredentials: true,
       });
       setExamHistory((prev) => prev.filter((exam) => exam._id !== id));

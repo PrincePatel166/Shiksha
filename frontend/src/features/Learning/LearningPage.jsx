@@ -16,8 +16,8 @@ const Learning = ({ isAuthenticated }) => {
 
     async function fetchData() {
       try {
-        const subjectResponse = await axios.get("/api/subjects", { withCredentials: true });
-        const topicResponse = await axios.get("/api/topics", { withCredentials: true });
+        const subjectResponse = await axios.get("https://shiksha-backend-vaw7.onrender.com/api/subjects", { withCredentials: true });
+        const topicResponse = await axios.get("https://shiksha-backend-vaw7.onrender.com/api/topics", { withCredentials: true });
 
         const fetchedSubjects = Array.isArray(subjectResponse.data) ? subjectResponse.data : [];
         const fetchedTopics = Array.isArray(topicResponse.data) ? topicResponse.data : [];
