@@ -645,8 +645,8 @@ const app = express();
 
 // CORS Configuration
 app.use(cors({
-  origin: "http://localhost:5173", // Allow requests from your frontend
-  credentials: true, // Allow cookies and authentication headers
+  origin: ["http://localhost:5173", "https://shiksha-portal.netlify.app"],
+  credentials: true
 }));
 
 app.use(express.json());
