@@ -8,7 +8,7 @@ const GetProfilePage = () => {
 
   const getProfile = async () => {
     try {
-      const res = await axios.get("https://shiksha-backend-vaw7.onrender.com/api/users/profile", {
+      const res = await axios.get("http://localhost:5000/api/users/profile", {
         withCredentials: true,
       });
       console.log("Fetched User:", res.data);

@@ -16,7 +16,7 @@ const CommunityPage = ({ isAuthenticated }) => {
 
   const fetchQuestions = async () => {
     try {
-      const res = await axios.get("https://shiksha-backend-vaw7.onrender.com/api/community/questions", {
+      const res = await axios.get("http://localhost:5000/api/community/questions", {
         withCredentials: true,
       });
       setQuestions(res.data || []);
@@ -28,7 +28,7 @@ const CommunityPage = ({ isAuthenticated }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://shiksha-backend-vaw7.onrender.com/api/community/questions", newQuestion, {
+      await axios.post("http://localhost:5000/api/community/questions", newQuestion, {
         withCredentials: true, // Ensures authentication via cookies
       });
       fetchQuestions();
@@ -41,7 +41,7 @@ const CommunityPage = ({ isAuthenticated }) => {
 
   const handleVote = async (id, type) => {
     try {
-      const res = await axios.put(`https://shiksha-backend-vaw7.onrender.com/api/community/questions/${id}/vote`, { type }, {
+      const res = await axios.put(`http://localhost:5000/api/community/questions/${id}/vote`, { type }, {
         withCredentials: true,
       });
 

@@ -19,7 +19,7 @@ const LoginPage = ({ setIsAuthenticated }) => {
 
     try {
       const res = await axios.post(
-        "https://shiksha-backend-vaw7.onrender.com/api/users/login",
+        "http://localhost:5000/api/users/login",
         formData,
         { withCredentials: true }
       );

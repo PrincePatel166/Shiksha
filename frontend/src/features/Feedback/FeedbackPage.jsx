@@ -17,7 +17,7 @@ const FeedbackPage = ({ isAuthenticated }) => {
   useEffect(() => {
     if (isAuthenticated) {
       axios
-        .get("https://shiksha-backend-vaw7.onrender.com/api/feedback", { withCredentials: true })
+        .get("http://localhost:5000/api/feedback", { withCredentials: true })
         .then((response) => setFeedbackList(response.data.feedbacks))
         .catch((error) => console.error("Error fetching feedback:", error));
     }
@@ -54,7 +54,7 @@ const FeedbackPage = ({ isAuthenticated }) => {
 
     try {
       const response = await axios.post(
-        "https://shiksha-backend-vaw7.onrender.com/api/feedback",
+        "http://localhost:5000/api/feedback",
         feedbackData,
         { withCredentials: true }
       );

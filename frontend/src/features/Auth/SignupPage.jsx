@@ -24,7 +24,7 @@ const SignupPage = () => {
 
     try {
       const res = await axios.post(
-        "https://shiksha-backend-vaw7.onrender.com/api/users/register",
+        "http://localhost:5000/api/users/register",
         formData,
         { withCredentials: true } // Ensures cookies are sent with the request
       );
